@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Extension)
-
+//验证email
+-(BOOL)isValidateEmail;
+//验证电话号码
+-(BOOL)isValidateTelNumber;
+// 正则判断手机号码地址格式
+- (BOOL)isMobileNumber;
 @end
