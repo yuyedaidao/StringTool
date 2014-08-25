@@ -21,6 +21,7 @@
 		2159313B19AAE4FD0040C954 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2159311D19AAE4FD0040C954 /* UIKit.framework */; };
 		2159314319AAE4FD0040C954 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2159314119AAE4FD0040C954 /* InfoPlist.strings */; };
 		2159314519AAE4FD0040C954 /* StringToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159314419AAE4FD0040C954 /* StringToolTests.m */; };
+		2159315519AAE8DC0040C954 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159315419AAE8DC0040C954 /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		2159314019AAE4FD0040C954 /* StringToolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StringToolTests-Info.plist"; sourceTree = "<group>"; };
 		2159314219AAE4FD0040C954 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2159314419AAE4FD0040C954 /* StringToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringToolTests.m; sourceTree = "<group>"; };
+		2159315319AAE8DC0040C954 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		2159315419AAE8DC0040C954 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		2159310D19AAE4FD0040C954 = {
 			isa = PBXGroup;
 			children = (
+				2159315219AAE8DC0040C954 /* Classes */,
 				2159311F19AAE4FD0040C954 /* StringTool */,
 				2159313E19AAE4FD0040C954 /* StringToolTests */,
 				2159311819AAE4FD0040C954 /* Frameworks */,
@@ -150,6 +154,15 @@
 				2159314119AAE4FD0040C954 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2159315219AAE8DC0040C954 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2159315319AAE8DC0040C954 /* NSString+Extension.h */,
+				2159315419AAE8DC0040C954 /* NSString+Extension.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +265,7 @@
 				2159313019AAE4FD0040C954 /* ViewController.m in Sources */,
 				2159312A19AAE4FD0040C954 /* AppDelegate.m in Sources */,
 				2159312619AAE4FD0040C954 /* main.m in Sources */,
+				2159315519AAE8DC0040C954 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
