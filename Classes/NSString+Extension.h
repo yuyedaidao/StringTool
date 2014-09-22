@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonDigest.h>
+
 
 @interface NSString (Extension)
 //验证email
@@ -15,4 +17,8 @@
 -(BOOL)isValidateTelNumber;
 // 正则判断手机号码地址格式
 - (BOOL)isMobileNumber;
+
+- (NSString *)md5HexDigest;
+- (NSString *)encodeToPercentEscapeString;
+- (NSString *)decodeFromPercentEscapeString;
 @end

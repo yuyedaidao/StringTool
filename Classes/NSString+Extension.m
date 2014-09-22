@@ -87,5 +87,38 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", strRegex];
     return [predicate evaluateWithObject:self];
 }
+- (NSString *)md5HexDigest{
     
+    const char* str = [self UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(str, strlen(str), result);
+    NSMutableString *ret = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH*2];
+    
+    for(int i = 0; i<CC_MD5_DIGEST_LENGTH; i++) {
+        [ret appendFormat:@"%02x",result[i]];
+    }
+    return ret;
+}
+- (NSString *)encodeToPercentEscapeString
+{
+    // Encode all the reserved characters, per RFC 3986
+    // (<http://www.ietf.org/rfc/rfc3986.txt>)
+    NSString *outputStr = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              (CFStringRef)self,
+                                                              NULL,
+                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                              kCFStringEncodingUTF8));
+    return outputStr;
+}
+
+- (NSString *)decodeFromPercentEscapeString{
+    NSMutableString *outputStr = [NSMutableString stringWithString:self];
+    [outputStr replaceOccurrencesOfString:@"+"
+                               withString:@" "
+                                  options:NSLiteralSearch
+                                    range:NSMakeRange(0, [outputStr length])];
+    
+    return [outputStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
 @end
