@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'StringTool'                                    #我的开源名字
-  s.version  = '0.0.1'                                         #版本号
+  s.version  = '0.0.2'                                         #版本号
   s.author   = { 'yuyedaidao' => 'wyqpadding@gmail.com' }             #作者信息
   s.homepage = 'https://github.com/yuyedaidao/StringTool'   #项目的主页
   s.summary  = 'a string util'                                     #项目描述
