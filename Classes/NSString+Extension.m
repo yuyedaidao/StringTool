@@ -83,7 +83,7 @@
     //    {
     //        return NO;
     //    }
-    NSString *strRegex = @"^1([3-8]\\d)\\d{8}$";
+    NSString *strRegex = @"^1([3-9]\\d)\\d{8}$";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", strRegex];
     return [predicate evaluateWithObject:self];
 }
